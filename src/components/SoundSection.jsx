@@ -1,4 +1,9 @@
 const SoundSection = () => {
+  const handleLearnMore = () => {
+    const element = document.getElementById("display-section");
+    element.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="sound-section wrapper" id="sound-section">
       <div className="body">
@@ -13,7 +18,7 @@ const SoundSection = () => {
               <button className="button">Buy</button>
             </li>
             <li>
-              <a href="#" className="link">
+              <a className="link" onClick={handleLearnMore}>
                 Learn more
               </a>
             </li>

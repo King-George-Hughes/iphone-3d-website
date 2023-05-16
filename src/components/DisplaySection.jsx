@@ -5,7 +5,7 @@ const DisplaySection = () => {
   };
 
   return (
-    <div className="display-section wrapper">
+    <div className="display-section wrapper" id="display-section">
       <h2 className="title">New</h2>
       <p className="text">Brilliant.</p>
       <span className="description">
