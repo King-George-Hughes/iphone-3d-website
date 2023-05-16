@@ -67,7 +67,6 @@ export const scrollAnimation = (position, target, onUpdate) => {
         immediateRender: false,
         //   scrub: true,
       },
-      onUpdate,
     })
     .to(target, {
       x: -0.55,
