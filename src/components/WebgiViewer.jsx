@@ -51,6 +51,12 @@ const WebgiViewer = () => {
 
     let needsUpdate = true;
 
+    // For Updating Camera View
+    const onUpdate = () => {
+      needsUpdate = true;
+      viewer.setDirty();
+    };
+
     // Add plugins individually.
     await viewer.addPlugin(GBufferPlugin);
     await viewer.addPlugin(new ProgressivePlugin(32));
@@ -75,7 +81,7 @@ const WebgiViewer = () => {
       needsUpdate ? camera.positionTargetUpdated(true) : (needsUpdate = false);
     });
 
-    memorizedScrollAnimation(position, target);
+    memorizedScrollAnimation(position, target, onUpdate);
   }, []);
 
   useEffect(() => {
